@@ -1,0 +1,250 @@
+/* Estilos específicos para el login tipo Google */
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  position: relative;
+  background-image: url('../../assets/images/Parque_San_Emigdio.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+
+
+/* Contenedor del formulario de login */
+.login-wrapper {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* Tarjeta de login */
+.login-card {
+  background: rgba(255, 255, 255, 0.98); /* Más opaco */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15),
+              0 2px 8px rgba(0, 0, 0, 0.08),
+              inset 0 0 0 1px rgba(255, 255, 255, 0.5); /* Sombra más compleja */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+  padding: 32px 40px;
+  color: #202124;
+  backdrop-filter: blur(12px); /* Más desenfoque */
+  -webkit-backdrop-filter: blur(12px);
+  max-height: 90vh;
+}
+
+/* Logo de login */
+.login-logo-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px; /* Ajustado para separar del título */
+}
+
+/* Ajusta el tamaño del logo según sea necesario */
+.login-logo {
+  width: 130px;
+  height: 130px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+/* Títulos*/
+.login-title {
+  font-family: 'Google Sans', 'Poppins', sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: #415dfc; /* Sino les gusta el Azul, puede ser Negro #000000 */
+  margin-bottom: 10px; /* Ajustado para añadir espacio al subtítulo */
+  text-align: center;
+}
+
+/* Subtítulos */
+.login-subtitle {
+  font-size: 16px;
+  font-family: 'Google Sans', 'Poppins', sans-serif;
+  font-weight: 400;
+  color: #202124;
+  margin-bottom: 12px; /* Ajustado para reducir el espacio */
+  text-align: center;
+}
+
+/* Formulario de login */
+.login-form {
+  margin-top: 1.5rem;
+}
+
+/* Campos de entrada */
+.input-group {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+/* Estilos para el campo de entrada */
+.input-field {
+  width: 100%;
+  height: 54px;
+  padding: 13px 15px;
+  font-size: 16px;
+  color: #202124;
+  background-color: transparent;
+  border: 1px solid #dadce0;
+  border-radius: 4px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+/* Estilos para el campo de entrada cuando se enfoca */
+.input-field:focus {
+  border-color: #1a73e8;
+  border-width: 2px;
+  box-shadow: none;
+}
+
+/* Estilos para el label del campo de entrada */
+.input-label {
+  position: absolute;
+  left: 16px;
+  top: 17px;
+  font-size: 16px;
+  color: #5f6368;
+  pointer-events: none;
+  transition: 0.2s ease all;
+  background-color:  rgba(255, 255, 255, 0.95);
+}
+
+/* Mueve el label hacia arriba cuando el campo está enfocado o tiene texto */
+.input-field:focus + .input-label,
+.input-field:not(:placeholder-shown) + .input-label {
+  top: -9px;
+  left: 12px;
+  font-size: 12px;
+  padding: 0 4px;
+  color: #1a73e8;
+  background-color:  rgba(255, 255, 255, 0.95);
+}
+
+/* Estilos para el icono de mostrar/ocultar contraseña */
+.password-toggle {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6b7280;
+  cursor: pointer;
+  transition: color 0.15s ease-in-out;
+}
+
+/* Cambia el color del icono al pasar el ratón por encima */
+.password-toggle:hover {
+  color: #4b5563;
+}
+
+/* Botón de login */
+.login-button {
+  display: block;
+  width: 100%;
+  max-width: 250px;
+  margin: 32px auto 0;
+  padding: 0 24px;
+  height: 42px;
+  background-color: #1a73e8;
+  color: #ffffff;
+  font-family: 'Google Sans', 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.25px;
+  line-height: 42px;
+  border-radius: 16px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+/* Efecto hover para el botón de login */
+.login-button:hover {
+  background-color: #1557b0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-1px);
+}
+
+/* Enlaces de ayuda */
+.login-links {
+  margin-top: 16px;
+  text-align: center;
+}
+
+/* Estilos para los enlaces de ayuda */
+.login-links a {
+  color: #1a73e8;
+  font-family: 'Google Sans', 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 0.25px;
+}
+
+/* Efecto hover para los enlaces de ayuda */
+.login-links a:hover {
+  text-decoration: underline;
+}
+
+/* Estilos para el texto de los enlaces de ayuda */
+.login-links span {
+  font-family: 'Google Sans', 'Poppins', sans-serif;
+  font-size: 15px;
+}
+
+/* Evitar scroll en la página de login */
+/* --- IGNORE --- */
+html, body {
+  overflow: hidden;
+  height: 100%;
+}
+
+.register-link-btn {
+  background: none;
+  border: none;
+  color: #1a73e8;
+  font-family: 'Google Sans', 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+  margin-left: 2px;
+  transition: color 0.2s;
+}
+.register-link-btn:hover {
+  color: #1557b0;
+}
+
+.user-type-options {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.user-type-btn {
+  background: #f3f4f6;
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-size: 16px;
+  font-family: 'Google Sans', 'Poppins', sans-serif;
+  color: #202124;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+}
+.user-type-btn:hover {
+  background: #415dfc;
+  color: #fff;
+  border-color: #415dfc;
+}
