@@ -26,15 +26,15 @@
 
 /* Tarjeta de login */
 .login-card {
-  background: rgba(255, 255, 255, 0.98); /* Más opaco */
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15),
-              0 2px 8px rgba(0, 0, 0, 0.08),
-              inset 0 0 0 1px rgba(255, 255, 255, 0.5); /* Sombra más compleja */
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 16px;
-  padding: 32px 40px;
+  background: rgba(255, 255, 255, 0.97);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1),
+              0 5px 10px rgba(0, 0, 0, 0.04),
+              inset 0 0 0 1px rgba(255, 255, 255, 0.7),
+              0 0 0 1px rgba(255, 255, 255, 0.5);
+  border-radius: 24px;
+  padding: 35px 40px;
   color: #202124;
-  backdrop-filter: blur(12px); /* Más desenfoque */
+  backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   max-height: 90vh;
 }
@@ -43,7 +43,7 @@
 .login-logo-container {
   display: flex;
   justify-content: center;
-  margin-bottom: 24px; /* Ajustado para separar del título */
+  margin-bottom: 24px;
 }
 
 /* Ajusta el tamaño del logo según sea necesario */
@@ -52,16 +52,18 @@
   height: 130px;
   object-fit: contain;
   margin: 0 auto;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 }
 
 /* Títulos*/
 .login-title {
   font-family: 'Google Sans', 'Poppins', sans-serif;
-  font-size: 24px;
-  font-weight: 400;
-  color: #415dfc; /* Sino les gusta el Azul, puede ser Negro #000000 */
-  margin-bottom: 10px; /* Ajustado para añadir espacio al subtítulo */
+  font-size: 26px;
+  font-weight: 500;
+  color: #415dfc;
+  margin-bottom: 12px;
   text-align: center;
+  letter-spacing: -0.3px;
 }
 
 /* Subtítulos */
@@ -69,9 +71,10 @@
   font-size: 16px;
   font-family: 'Google Sans', 'Poppins', sans-serif;
   font-weight: 400;
-  color: #202124;
-  margin-bottom: 12px; /* Ajustado para reducir el espacio */
+  color: #5f6368;
+  margin-bottom: 12px;
   text-align: center;
+  line-height: 1.4;
 }
 
 /* Formulario de login */
@@ -92,18 +95,18 @@
   padding: 13px 15px;
   font-size: 16px;
   color: #202124;
-  background-color: transparent;
-  border: 1px solid #dadce0;
-  border-radius: 4px;
+  background-color: #ffffff;
+  border: 1.5px solid #e8eaed;
+  border-radius: 12px;
   outline: none;
   transition: all 0.2s ease;
 }
 
 /* Estilos para el campo de entrada cuando se enfoca */
 .input-field:focus {
-  border-color: #1a73e8;
-  border-width: 2px;
-  box-shadow: none;
+  border-color: #415dfc;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 1px #415dfc;
 }
 
 /* Estilos para el label del campo de entrada */
@@ -115,7 +118,7 @@
   color: #5f6368;
   pointer-events: none;
   transition: 0.2s ease all;
-  background-color:  rgba(255, 255, 255, 0.95);
+  background-color: #ffffff;
 }
 
 /* Mueve el label hacia arriba cuando el campo está enfocado o tiene texto */
@@ -124,9 +127,10 @@
   top: -9px;
   left: 12px;
   font-size: 12px;
-  padding: 0 4px;
-  color: #1a73e8;
-  background-color:  rgba(255, 255, 255, 0.95);
+  padding: 0 6px;
+  color: #415dfc;
+  background-color: #ffffff;
+  font-weight: 500;
 }
 
 /* Estilos para el icono de mostrar/ocultar contraseña */
@@ -152,26 +156,31 @@
   max-width: 250px;
   margin: 32px auto 0;
   padding: 0 24px;
-  height: 42px;
-  background-color: #1a73e8;
+  height: 48px;
+  background: #1a73e8;
   color: #ffffff;
   font-family: 'Google Sans', 'Poppins', sans-serif;
   font-size: 16px;
   font-weight: 500;
   letter-spacing: 0.25px;
-  line-height: 42px;
-  border-radius: 16px;
+  line-height: 48px;
+  border-radius: 12px;
   border: none;
   cursor: pointer;
   text-align: center;
-  transition: all 0.2s ease;
+  transition: background-color 0.2s ease;
+  box-shadow: 0 2px 6px rgba(26, 115, 232, 0.2);
 }
 
 /* Efecto hover para el botón de login */
 .login-button:hover {
-  background-color: #1557b0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transform: translateY(-1px);
+  background: #1557b0;
+}
+
+/* Efecto active para el botón de login */
+.login-button:active {
+  background: #1a73e8;
+  box-shadow: 0 1px 4px rgba(26, 115, 232, 0.2);
 }
 
 /* Enlaces de ayuda */
@@ -188,11 +197,16 @@
   font-weight: 500;
   text-decoration: none;
   letter-spacing: 0.25px;
+  padding: 4px 8px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
 }
 
 /* Efecto hover para los enlaces de ayuda */
 .login-links a:hover {
-  text-decoration: underline;
+  background-color: rgba(26, 115, 232, 0.1);
+  color: #1557b0;
+  text-decoration: none;
 }
 
 /* Estilos para el texto de los enlaces de ayuda */
