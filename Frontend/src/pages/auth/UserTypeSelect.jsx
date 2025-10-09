@@ -34,14 +34,18 @@ const UserTypeSelect = () => {
   const navigate = useNavigate();
 
   const handleSelect = (type) => {
-    navigate(`/register?type=${type}`);
+    if (type === 'visitante') {
+      navigate('/register/visitante');
+    } else {
+      navigate(`/register?type=${type}`);
+    }
   };
 
   return (
     <div className="user-type-container">
       <div className="user-type-box">
         <button 
-          onClick={() => navigate(-1)} 
+          onClick={() => navigate('/login')} 
           className="back-button"
         >
           <ArrowLeft size={20} />
