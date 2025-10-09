@@ -30,7 +30,7 @@ export default function Login() {
                 htmlFor="email"
                 className="input-label"
               >
-                Correo electrónico
+                Número de Documento
               </label>
             </div>
 

@@ -13,5 +13,9 @@
   "files.exclude": {
     "**/.turbo": true
   },
-  "docwriter.style": "Auto-detect"
+  "docwriter.style": "Auto-detect",
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "terminal.integrated.commandsToSkipShell": [
+    ""
+  ]
 }

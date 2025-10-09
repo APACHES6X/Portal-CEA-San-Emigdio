@@ -12,10 +12,13 @@
   html, body, #root {
     height: 100%;
   }
+  html {
+    background-color: #ffffff; /* Fondo blanco para evitar el parpadeo */
+  }
   body {
     @apply antialiased text-slate-100;
     font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-    background: linear-gradient(120deg, #e6fbef 0%, #c7f6d6 40%, #95e9b0 70%, #e6eafc 100%);
+    background-color: #ffffff; /* Fondo blanco para evitar el parpadeo */
     /* Fondo suave tipo Microsoft, tonos verdes y azul claro */
   }
   h1 { @apply text-4xl md:text-5xl font-extrabold leading-tight; }
