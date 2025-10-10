@@ -1,11 +1,12 @@
-// Tipos para las validaciones
-type ValidationResult = {
+import { ValidationResult as FormValidationResult, FormErrors } from '../types/forms';
+
+interface FieldValidationResult {
   isValid: boolean;
   message?: string;
-};
+}
 
 // Validación de email
-export const validateEmail = (email: string): ValidationResult => {
+export const validateEmail = (email: string): FieldValidationResult => {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!email) {
     return { isValid: false, message: 'El correo electrónico es requerido' };
@@ -17,7 +18,7 @@ export const validateEmail = (email: string): ValidationResult => {
 };
 
 // Validación de contraseña
-export const validatePassword = (password: string): ValidationResult => {
+export const validatePassword = (password: string): FieldValidationResult => {
   if (!password) {
     return { isValid: false, message: 'La contraseña es requerida' };
   }
@@ -37,7 +38,7 @@ export const validatePassword = (password: string): ValidationResult => {
 };
 
 // Validación de nombre
-export const validateName = (name: string): ValidationResult => {
+export const validateName = (name: string): FieldValidationResult => {
   if (!name) {
     return { isValid: false, message: 'El nombre es requerido' };
   }

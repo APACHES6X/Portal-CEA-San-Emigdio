@@ -1,17 +1,9 @@
 import React, { createContext, useContext, useState, useCallback, useMemo, ReactNode } from 'react';
-import { AuthUser } from '../types/user';
+import { AuthUser, AuthContextType, BaseUser } from '../types';
 import { loginUser, registerUser, logoutUser } from '../services/authService';
+import type { RegisterData } from '../services/authService';
 
-interface AuthContextType {
-  user: AuthUser | null;
-  isAuthenticated: boolean;
-  isLoading: boolean;
-  error: string | null;
-  login: (email: string, password: string) => Promise<void>;
-  register: (userData: Omit<AuthUser, 'id' | 'createdAt' | 'updatedAt'>) => Promise<void>;
-  logout: () => Promise<void>;
-  clearError: () => void;
-}
+// Using the AuthContextType interface from types/index.ts
 
 interface AuthProviderProps {
   children: ReactNode;
@@ -39,9 +31,10 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     setIsLoading(true);
     setError(null);
     try {
-      const userData = await loginUser(email, password);
-      setUser(userData);
-      localStorage.setItem('user', JSON.stringify(userData));
+      const response = await loginUser({ email, password });
+      setUser(response.user);
+      localStorage.setItem('user', JSON.stringify(response.user));
+      localStorage.setItem('token', response.token);
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Error al iniciar sesión');
       throw err;
@@ -50,13 +43,14 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     }
   }, []);
 
-  const register = useCallback(async (userData: Omit<AuthUser, 'id' | 'createdAt' | 'updatedAt'>) => {
+  const register = useCallback(async (userData: Omit<BaseUser, 'id'>) => {
     setIsLoading(true);
     setError(null);
     try {
-      const newUser = await registerUser(userData);
-      setUser(newUser);
-      localStorage.setItem('user', JSON.stringify(newUser));
+      const response = await registerUser(userData as RegisterData);
+      setUser(response.user);
+      localStorage.setItem('user', JSON.stringify(response.user));
+      localStorage.setItem('token', response.token);
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Error al registrar usuario');
       throw err;
