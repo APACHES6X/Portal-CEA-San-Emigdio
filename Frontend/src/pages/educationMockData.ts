@@ -8,7 +8,7 @@ export const educationMockData: EducationPageProps = {
     {
       id: 1,
       emoji: "🌳",
-      title: "Caminata Ecológica Guiada",
+      title: "Caminata Ecológica",
       description: "Explora los senderos del parque con guías expertos que te enseñarán sobre la flora y fauna local",
       durationMinutes: 120,
       participantsMin: 15,
