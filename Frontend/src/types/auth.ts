@@ -39,6 +39,20 @@ export interface AuthContextValue extends AuthState {
   clearError: () => void;
 }
 
+// Alias for backward compatibility
+export type AuthContextType = AuthContextValue;
+
+// Base user type for registration
+export interface BaseUser {
+  email: string;
+  name: string;
+  userType: string;
+  documento?: string;
+  telefono?: string;
+  direccion?: string;
+}
+
+// Auth response from API
 export interface AuthResponse {
   user: User;
   token: string;
