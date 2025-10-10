@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AuthProvider } from './contexts/AuthContext';
 import LandingPage from './pages/LandingPage';
@@ -8,6 +7,7 @@ import RegisterVisitante from './pages/auth/RegisterVisitante';
 import ForgotPassword from './pages/auth/ForgotPassword';
 import Dashboard from './pages/Dashboard';
 import Profile from './pages/profile/Profile';
+import EducationPage from './pages/EducationPage';
 import './App.css';
 
 const App: React.FC = () => {
@@ -21,6 +21,12 @@ const App: React.FC = () => {
           <Route path="/register" element={<UserTypeSelect />} />
           <Route path="/register/visitante" element={<RegisterVisitante />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
+          
+          {/* Rutas de educación */}
+          <Route path="/educacion/actividades" element={<EducationPage />} />
+          <Route path="/educacion/material-academico" element={<EducationPage />} />
+          <Route path="/educacion/articulos-cientificos" element={<EducationPage />} />
+          <Route path="/educacion/capacitaciones" element={<EducationPage />} />
           
           {/* Rutas protegidas */}
           <Route path="/dashboard" element={<Dashboard />} />

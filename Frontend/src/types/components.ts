@@ -17,17 +17,6 @@ export interface FormField {
   maxLength?: number;
 }
 
-// Tipos para respuestas de autenticación
-export interface AuthResponse {
-  token: string;
-  user: {
-    id: string;
-    email: string;
-    name: string;
-    role: string;
-  };
-}
-
 // Tipos para la navegación
 export interface NavItem {
   name: string;
