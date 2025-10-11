@@ -1,4 +1,5 @@
 /* Estilos para el registro de visitantes */
+/* Contenedor principal de la página de registro de visitantes */
 .register-container {
   height: 100vh;
   width: 100%;
@@ -17,7 +18,8 @@
 }
 
 /* Logo del parque */
-.park-logo {
+/* Estilos para el logo del parque dentro del contenedor de registro */
+.register-container .park-logo {
   width: 110px;
   height: 110px;
   object-fit: contain;
@@ -28,6 +30,7 @@
 }
 
 /* Contenedor principal */
+/* Pseudo-elemento para el fondo borroso y translúcido del contenedor principal */
 .register-container::before {
   content: '';
   position: fixed;
@@ -42,7 +45,8 @@
 }
 
 /* Caja de registro */
-.register-box {
+/* Estilos para la caja que contiene el formulario de registro */
+.register-container .register-box {
   background: rgba(255, 255, 255, 0.98);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
@@ -64,32 +68,41 @@
 }
 
 /* Contenedor de progreso */
-.progress-container {
+/* Estilos para el contenedor que muestra los pasos del progreso del formulario */
+.register-container .progress-container {
   width: 100%;
   padding: 0 1rem 1rem;
   margin-bottom: 1rem;
   position: relative;
 }
 
-.input-row {
+/* Fila de entrada genérica */
+/* Estilos para una fila que agrupa campos de entrada */
+.register-container .input-row {
   display: grid;
   gap: 20px;
   margin-bottom: 20px;
   width: 100%;
 }
 
-.input-row.name-row {
+/* Fila de entrada para nombres y apellidos */
+/* Estilos específicos para la fila que contiene los campos de nombre y apellido */
+.register-container .input-row.name-row {
   grid-template-columns: 1fr 1fr;
 }
 
-.birth-date-section {
+/* Sección de fecha de nacimiento */
+/* Estilos para la sección que contiene los campos de fecha de nacimiento */
+.register-container .birth-date-section {
   margin-bottom: 40px;
   padding: 0;
   margin-top: 24px;
   position: relative;
 }
 
-.birth-date-container {
+/* Contenedor de fecha de nacimiento */
+/* Estilos para el contenedor de los campos de día, mes y año de nacimiento */
+.register-container .birth-date-container {
   display: flex;
   gap: 20px;
   margin-top: 5px;
@@ -97,32 +110,44 @@
   padding: 0 2px;
 }
 
-.date-fields {
+/* Campos de fecha */
+/* Estilos para los campos individuales de día, mes y año */
+.register-container .date-fields {
   display: flex;
   gap: 10px;
   flex: 2;
 }
 
-.date-input {
+/* Campo de entrada de fecha individual */
+/* Estilos para cada campo de entrada de fecha (día, mes, año) */
+.register-container .date-input {
   flex: 1;
   min-width: 0;
 }
 
-.date-input input.input-field {
+/* Campo de entrada de fecha dentro de un input-field */
+/* Estilos para el campo de entrada de fecha específico */
+.register-container .date-input input.input-field {
   width: 100%;
   padding: 8px 12px;
   font-size: 0.9rem;
 }
 
-.phone-input {
+/* Campo de entrada de teléfono */
+/* Estilos para el campo de entrada del número de teléfono */
+.register-container .phone-input {
   flex: 2;
 }
 
-.date-header {
+/* Encabezado de fecha */
+/* Estilos para el encabezado o etiqueta de la sección de fecha */
+.register-container .date-header {
   margin-bottom: 8px;
 }
 
-.date-label {
+/* Etiqueta de fecha */
+/* Estilos para la etiqueta de los campos de fecha */
+.register-container .date-label {
   font-size: 1rem;
   color: #0d0e0e;
   display: flex;
@@ -135,48 +160,62 @@
   transition: color 0.2s ease;
 }
 
-.calendar-icon {
+/* Icono de calendario */
+/* Estilos para el icono de calendario */
+.register-container .calendar-icon {
   color: #4f46e5;
   margin-top: -1px;
 }
 
-.input-row.select-row {
+/* Fila de entrada para selectores */
+/* Estilos para la fila que contiene campos de selección (dropdowns) */
+.register-container .input-row.select-row {
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-.input-row .input-group {
+/* Grupo de entrada dentro de una fila */
+/* Ajuste de margen para grupos de entrada dentro de una fila */
+.register-container .input-row .input-group {
   margin-bottom: 0;
 }
 
-/* Campos de texto */
-.input-row .input-group input.input-field {
+/* Campos de texto dentro de una fila */
+/* Estilos para los campos de texto dentro de un grupo de entrada en una fila */
+.register-container .input-row .input-group input.input-field {
   width: 100%;
 }
 
-/* Campos de lista desplegable */
-.input-row .input-group select.input-field {
+/* Campos de lista desplegable dentro de una fila */
+/* Estilos para los campos de selección (select) dentro de un grupo de entrada en una fila */
+.register-container .input-row .input-group select.input-field {
   width: 100%;
   min-width: 0;
 }
 
 /* Ajuste para la fila de nombres y apellidos */
-.input-row.name-row {
+/* Estilos para la disposición de los campos de nombre y apellido */
+.register-container .input-row.name-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
 
-.input-row.name-row .input-group input.input-field {
+/* Campo de entrada dentro de la fila de nombres y apellidos */
+/* Estilos para los campos de entrada específicos en la fila de nombres y apellidos */
+.register-container .input-row.name-row .input-group input.input-field {
   width: 100%;
 }
 
-.input-group {
+/* Grupo de entrada genérico */
+/* Estilos para un grupo de entrada que contiene un campo y su etiqueta */
+.register-container .input-group {
   position: relative;
   margin-bottom: 20px;
 }
 
 /* Título del registro */
-.register-title {
+/* Estilos para el título principal del formulario de registro */
+.register-container .register-title {
   font-family: 'Google Sans', 'Poppins', sans-serif;
   font-size: 24px;
   font-weight: 600;
@@ -188,7 +227,9 @@
   line-height: 1.3;
 }
 
-.register-title::after {
+/* Línea debajo del título */
+/* Pseudo-elemento para la línea decorativa debajo del título principal */
+.register-container .register-title::after {
   content: '';
   display: block;
   width: 40px;
@@ -200,9 +241,37 @@
   opacity: 0.9;
 }
 
+/* Título de la sección del formulario */
+/* Estilos para los títulos (h2) dentro de cada paso del formulario */
+.register-container .form-step h2 {
+  color: #1a1f36;
+  font-size: 19px;
+  font-weight: 500;
+  margin-bottom: 24px;
+  font-family: 'Google Sans', 'Poppins', sans-serif;
+  text-align: left;
+  letter-spacing: -0.3px;
+  position: relative;
+  line-height: 1.3;
+  padding-bottom: 10px;
+}
+
+/* Línea debajo del título de la sección */
+/* Pseudo-elemento para la línea decorativa debajo de los títulos de sección */
+.register-container .form-step h2::after {
+  content: '';
+  display: block;
+  width: 28px;
+  height: 3px;
+  background: linear-gradient(90deg, #415dfc, #2440db);
+  margin: 8px 0 0;
+  border-radius: 3px;
+  opacity: 0.6;
+}
 
 /* Pasos del progreso */
-.steps {
+/* Estilos para el contenedor de los indicadores de pasos del formulario */
+.register-container .steps {
   display: flex;
   justify-content: space-between;
   margin: 1.5rem auto;
@@ -215,7 +284,10 @@
   width: 100%;
   gap: 0;
 }
-.step {
+
+/* Paso individual */
+/* Estilos para cada círculo que representa un paso del formulario */
+.register-container .step {
   width: var(--step-size);
   height: var(--step-size);
   border-radius: 50%;
@@ -235,29 +307,33 @@
 }
 
 /* Mostrar el número solo en pasos no completados */
-.step:not(.completed)::before {
+/* Pseudo-elemento para mostrar el número del paso si no está completado */
+.register-container .step:not(.completed)::before {
   content: attr(data-step);
 }
 
 /* Círculo activo */
-.step.active {
+/* Estilos para el paso actualmente activo */
+.register-container .step.active {
   background: #4f46e5;
   border-color: transparent;
   color: white;
 }
 
 /* Círculo completado */
-.step.completed {
+/* Estilos para un paso que ha sido completado */
+.register-container .step.completed {
   background-color: #10b981 !important;
   border: none !important;
-  color: transparent !important; /* Oculta el número */
+  color: transparent !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
 }
 
 /* Chulito en círculo completado */
-.step.completed::after {
+/* Pseudo-elemento para mostrar un "✓" en los pasos completados */
+.register-container .step.completed::after {
   content: '✓';
   position: absolute;
   font-size: 16px;
@@ -271,13 +347,15 @@
 }
 
 /* Círculo no completado */
-.step:not(.active):not(.completed) {
+/* Estilos para los pasos que no están activos ni completados */
+.register-container .step:not(.active):not(.completed) {
   background: #fff;
   border: 2px solid #e8eaed;
 }
 
 /* Línea de progreso */
-.steps::after {
+/* Pseudo-elemento para la línea de progreso general entre los pasos */
+.register-container .steps::after {
   content: '';
   position: absolute;
   top: 16px;
@@ -288,19 +366,23 @@
   z-index: -1;
 }
 
-.steps.progress::after {
+/* Línea de progreso con estado de progreso */
+/* Estilos para la línea de progreso que indica el avance */
+.register-container .steps.progress::after {
   background: linear-gradient(90deg, #415dfc var(--step-progress, 0%), #e8eaed var(--step-progress, 0%));
 }
 
 /* Etiquetas de los pasos */
-.step:not(.completed)::before {
+/* Pseudo-elemento para mostrar el número del paso (redundante con el anterior, se puede consolidar) */
+.register-container .step:not(.completed)::before {
   content: attr(data-step);
   font-size: 14px;
   font-weight: 500;
 }
 
 /* Línea de progreso moderna */
-.steps {
+/* Definición de variables CSS y estilos para la línea de progreso moderna */
+.register-container .steps {
   --step-size: 32px;
   --step-count: 4;
   --total-width: calc(100% - (var(--step-size)));
@@ -315,7 +397,8 @@
 }
 
 /* Línea base (gris) */
-.steps::before {
+/* Pseudo-elemento para la línea de fondo gris de la barra de progreso */
+.register-container .steps::before {
   content: '';
   position: absolute;
   top: 50%;
@@ -329,7 +412,8 @@
 }
 
 /* Línea de progreso (azul) */
-.steps::after {
+/* Pseudo-elemento para la línea de progreso azul que avanza */
+.register-container .steps::after {
   content: '';
   position: absolute;
   top: 50%;
@@ -343,141 +427,115 @@
 }
 
 /* Estados de progreso */
-.steps[data-current-step="1"]::after {
+/* Ajuste del ancho de la línea de progreso según el paso actual */
+.register-container .steps[data-current-step="1"]::after {
   width: 0;
 }
 
-.steps[data-current-step="2"]::after {
+.register-container .steps[data-current-step="2"]::after {
   width: calc((100% - var(--step-size)) * 0.333);
 }
 
-.steps[data-current-step="3"]::after {
+.register-container .steps[data-current-step="3"]::after {
   width: calc((100% - var(--step-size)) * 0.666);
 }
 
-.steps[data-current-step="4"]::after {
+.register-container .steps[data-current-step="4"]::after {
   width: calc(100% - var(--step-size));
 }
 
 /* Pasos del formulario */
-.steps {
+/* Estilos para la disposición de los pasos del formulario (redundante con .steps anterior, se puede consolidar) */
+.register-container .steps {
   display: flex;
   justify-content: space-between;
   position: relative;
   margin-top: -14px;
 }
 
-/* Estas reglas se han movido arriba para evitar duplicación */
-
-
-
 /* Formulario y campos */
-.form-step {
+/* Estilos para cada sección o "paso" del formulario */
+.register-container .form-step {
   display: none;
   width: 100%;
-  margin-top: 1rem;
+  margin-bottom: -2rem;
+  margin-top: 2px;
+  min-height: 300px;
 }
 
-.form-step.active {
+/* Paso del formulario activo */
+/* Estilos para mostrar el paso del formulario actualmente activo */
+.register-container .form-step.active {
   display: block;
-}
-
-.form-step h2 {
-  color: #1a1f36;
-  font-size: 19px;
-  font-weight: 500;
-  margin-bottom: 24px;
-  font-family: 'Google Sans', 'Poppins', sans-serif;
-  text-align: left;
-  letter-spacing: -0.3px;
-  position: relative;
-  line-height: 1.3;
-  padding-bottom: 10px;
-}
-
-.form-step h2::after {
-  content: '';
-  display: block;
-  width: 28px;
-  height: 3px;
-  background: linear-gradient(90deg, #415dfc, #2440db);
-  margin: 8px 0 0;
-  border-radius: 3px;
-  opacity: 0.6;
-}
-
-/* Grupos de entrada */
-.input-group {
-  position: relative;
-  margin-bottom: 24px;
 }
 
 /* Campo de entrada */
-.input-field {
+/* Estilos base para todos los campos de entrada de texto */
+.register-container .input-field {
   width: 100%;
-  height: 48px;
-  padding: 12px 15px;
-  font-size: 15px;
+  height: 54px;
+  padding: 13px 15px;
+  font-size: 16px;
   color: #202124;
   background-color: #ffffff;
   border: 1.5px solid #e8eaed;
   border-radius: 12px;
   outline: none;
+  transition: all 0.2s ease;
 }
 
-/* Personalización de select y datalist */
-select.input-field,
-input[list].input-field {
-  appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 12px center;
-  background-size: 16px;
-  padding-right: 40px;
+/* Etiqueta del campo */
+/* Estilos para la etiqueta flotante de los campos de entrada */
+.register-container .input-label {
+  position: absolute;
+  left: 16px;
+  top: 17px;
+  font-size: 16px;
+  color: #5f6368;
+  pointer-events: none;
+  transition: 0.2s ease all;
+  background-color: rgba(255, 255, 255, 0.98);
 }
 
-select.input-field option:first-child {
-  color: #666;
-  font-weight: 500;
-}
-
-select.input-field option:not(:first-child) {
-  color: #202124;
-}
-
-/* Campo de entrada cuando está enfocado */
-.input-field:focus {
-  border-color: #415dfc;
-  background-color: #ffffff;
-}
-
-/* Placeholder personalizado para inputs */
-.input-field::placeholder {
-  color: #666;
-  opacity: 1;
+/* Grupos de entrada */
+/* Estilos para el contenedor de un campo de entrada y su etiqueta */
+.register-container .input-group {
+  position: relative;
+  margin-bottom: auto;
 }
 
 /* Etiqueta cuando el campo está enfocado o tiene contenido */
-.input-field:focus + .input-label,
-.input-field:not(:placeholder-shown) + .input-label {
+/* Estilos para la etiqueta flotante cuando el campo de entrada está activo o lleno */
+.register-container .input-field:focus + .input-label,
+.register-container .input-field:not(:placeholder-shown) + .input-label {
   top: -9px;
   left: 12px;
   font-size: 12px;
   padding: 0 6px;
   color: #415dfc;
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.98);
   font-weight: 500;
 }
 
+/* Campo de entrada cuando se enfoca */
+/* Estilos para el campo de entrada cuando recibe el foco */
+.register-container .input-field:focus {
+  border-color: #415dfc;
+  background-color: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 0 0 1px #415dfc;
+}
+
 /* Campo de texto multilínea */
-.textarea-field {
+/* Estilos para campos de texto de múltiples líneas (textarea) */
+.register-container .textarea-field {
   height: 120px;
   padding-top: 20px;
   resize: none;
 }
 
 /* Navegación del formulario */
-.form-navigation {
+/* Estilos para el contenedor de los botones de navegación del formulario */
+.register-container .form-navigation {
   display: flex;
   justify-content: space-between;
   margin-top: 1.5rem;
@@ -485,9 +543,10 @@ select.input-field option:not(:first-child) {
 }
 
 /* Botones de navegación */
-.register-form .prev-btn,
-.register-form .next-btn,
-.register-form .submit-btn {
+/* Estilos base para los botones de navegación (anterior, siguiente, enviar) */
+.register-container .register-form .prev-btn,
+.register-container .register-form .next-btn,
+.register-container .register-form .submit-btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -508,30 +567,40 @@ select.input-field option:not(:first-child) {
   position: relative;
 }
 
-.register-form .prev-btn:hover:not(:disabled),
-.register-form .next-btn:hover:not(:disabled),
-.register-form .submit-btn:hover:not(:disabled) {
+/* Efecto hover para botones de navegación */
+/* Estilos para los botones de navegación al pasar el ratón por encima */
+.register-container .register-form .prev-btn:hover:not(:disabled),
+.register-container .register-form .next-btn:hover:not(:disabled),
+.register-container .register-form .submit-btn:hover:not(:disabled) {
   background: rgba(65, 93, 252, 0.08);
   transform: translateX(-4px);
   color: #212529;
 }
 
-.register-form .next-btn:hover:not(:disabled),
-.register-form .submit-btn:hover:not(:disabled) {
+/* Efecto hover para botones "Siguiente" y "Enviar" */
+/* Estilos específicos para los botones "Siguiente" y "Enviar" al pasar el ratón por encima */
+.register-container .register-form .next-btn:hover:not(:disabled),
+.register-container .register-form .submit-btn:hover:not(:disabled) {
   transform: translateX(4px);
 }
 
-.register-form .next-btn,
-.register-form .submit-btn {
+/* Color de texto para botones "Siguiente" y "Enviar" */
+/* Color de texto para los botones de avance en el formulario */
+.register-container .register-form .next-btn,
+.register-container .register-form .submit-btn {
   color: #415dfc;
 }
 
-button:disabled {
+/* Botones deshabilitados */
+/* Estilos para botones que están deshabilitados */
+.register-container button:disabled {
   opacity: 0.6;
   cursor: not-allowed;
 }
 
-.arrow-icon {
+/* Icono de flecha */
+/* Estilos para los iconos de flecha dentro de los botones de navegación */
+.register-container .arrow-icon {
   width: 20px;
   height: 20px;
   display: inline-block;
@@ -539,22 +608,30 @@ button:disabled {
   margin: 0 4px;
 }
 
-.prev-btn .arrow-icon {
+/* Icono de flecha del botón "Anterior" */
+/* Margen específico para el icono de flecha del botón "Anterior" */
+.register-container .prev-btn .arrow-icon {
   margin-right: 8px;
 }
 
-.next-btn .arrow-icon {
+/* Icono de flecha del botón "Siguiente" */
+/* Margen específico para el icono de flecha del botón "Siguiente" */
+.register-container .next-btn .arrow-icon {
   margin-left: 8px;
 }
 
-.summary {
+/* Resumen del formulario */
+/* Estilos para la sección de resumen del formulario */
+.register-container .summary {
   background-color: #f8fafc;
   border-radius: 12px;
   padding: 24px;
   border: 1.5px solid #e8eaed;
 }
 
-.summary h3 {
+/* Título del resumen */
+/* Estilos para el título (h3) dentro de la sección de resumen */
+.register-container .summary h3 {
   color: #202124;
   font-size: 18px;
   font-weight: 500;
@@ -562,19 +639,24 @@ button:disabled {
   font-family: 'Google Sans', 'Poppins', sans-serif;
 }
 
-.summary p {
+/* Párrafos del resumen */
+/* Estilos para los párrafos de texto dentro de la sección de resumen */
+.register-container .summary p {
   color: #5f6368;
   margin-bottom: 12px;
   font-size: 14px;
   line-height: 1.5;
 }
 
-.summary p strong {
+/* Texto en negrita del resumen */
+/* Estilos para el texto en negrita dentro de los párrafos del resumen */
+.register-container .summary p strong {
   color: #202124;
   font-weight: 500;
 }
 
 /* Animación del chulito */
+/* Definición de la animación para la aparición del "✓" */
 @keyframes checkmarkAppear {
   0% {
     opacity: 0;
@@ -587,23 +669,28 @@ button:disabled {
 }
 
 /* Ajustes responsivos */
+/* Media query para pantallas con un ancho máximo de 768px */
 @media (max-width: 768px) {
+  /* Contenedor principal en pantallas pequeñas */
   .register-container {
     padding: 1rem;
   }
 
-  .register-box {
+  /* Caja de registro en pantallas pequeñas */
+  .register-container .register-box {
     padding: 24px;
     border-radius: 20px;
   }
 
-  .form-navigation {
+  /* Navegación del formulario en pantallas pequeñas */
+  .register-container .form-navigation {
     flex-direction: column;
   }
 
-  .prev-btn,
-  .next-btn,
-  .submit-btn {
+  /* Botones de navegación en pantallas pequeñas */
+  .register-container .register-form .prev-btn,
+  .register-container .register-form .next-btn,
+  .register-container .register-form .submit-btn {
     width: 100%;
   }
 }

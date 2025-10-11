@@ -1,3 +1,5 @@
+/* Estilos para la selección de tipo de usuario */
+/* Contenedor principal de la selección de tipo de usuario */
 .user-type-container {
   min-height: 100vh;
   display: flex;
@@ -11,6 +13,7 @@
   padding: 2rem;
 }
 
+/* Pseudo-elemento para el fondo borroso y translúcido del contenedor principal */
 .user-type-container::before {
   content: '';
   position: absolute;
@@ -22,6 +25,7 @@
   backdrop-filter: blur(12px);
 }
 
+/* Caja principal para la selección de tipo de usuario */
 .user-type-box {
   background: linear-gradient(145deg, rgba(255, 255, 255, 0.99), rgba(255, 255, 255, 0.96));
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12),
@@ -46,6 +50,7 @@
   -webkit-backdrop-filter: blur(12px);
 }
 
+/* Botón de retroceso dentro de la caja de selección de tipo de usuario */
 .user-type-box .back-button {
   position: absolute;
   bottom: 12px;
@@ -70,18 +75,21 @@
   z-index: 3;
 }
 
+/* Estilos del botón de retroceso al pasar el ratón (no deshabilitado) */
 .user-type-box .back-button:hover:not(:disabled) {
   background: rgba(65, 93, 252, 0.12);
   transform: translateX(-4px);
   color: #212529;
 }
 
-.back-button:disabled {
+/* Estilos del botón de retroceso deshabilitado */
+.user-type-box .back-button:disabled {
   opacity: 0.6;
   cursor: not-allowed;
 }
 
-.back-button .arrow-icon {
+/* Icono de flecha dentro del botón de retroceso */
+.user-type-box .back-button .arrow-icon {
   width: 20px;
   height: 20px;
   display: inline-block;
@@ -89,6 +97,7 @@
   margin-right: 8px;
 }
 
+/* Título de la sección de tipo de usuario */
 .user-type-title {
   color: #212529;
   font-size: 1.75rem;
@@ -97,8 +106,9 @@
   text-align: center;
 }
 
+/* Subtítulo de la sección de tipo de usuario */
 .user-type-subtitle {
-  color: #1f2122;
+  color: #1a1f36;
   font-size: 1rem;
   margin-bottom: 2.5rem;
   text-align: center;
@@ -106,6 +116,7 @@
   max-width: 600px;
 }
 
+/* Contenedor de la cuadrícula de tipos de usuario */
 .user-type-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(180px, 280px));
@@ -116,6 +127,7 @@
   justify-content: center;
 }
 
+/* Tarjeta individual de tipo de usuario */
 .user-type-card {
   background: linear-gradient(145deg, #ffffff, #f8f9fa);
   border-radius: 16px;
@@ -141,6 +153,7 @@
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Pseudo-elemento para el efecto de fondo de la tarjeta al pasar el ratón */
 .user-type-card::after {
   content: '';
   position: absolute;
@@ -155,6 +168,7 @@
   z-index: -1;
 }
 
+/* Estilos de la tarjeta al pasar el ratón */
 .user-type-card:hover {
   transform: translate3d(0, -4px, 0);
   border-color: rgba(255,255,255,0.95);
@@ -164,10 +178,12 @@
               inset 0 1px 0 rgba(255,255,255,0.95);
 }
 
+/* Pseudo-elemento de la tarjeta al pasar el ratón */
 .user-type-card:hover::after {
   opacity: 1;
 }
 
+/* Icono de tipo de usuario */
 .user-type-icon {
   width: 42px;
   height: 42px;
@@ -190,6 +206,7 @@
               color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Icono de tipo de usuario al pasar el ratón */
 .user-type-card:hover .user-type-icon {
   background-color: #4656e5;
   color: white;
@@ -197,6 +214,7 @@
   box-shadow: 0 4px 8px rgba(79, 70, 229, 0.2);
 }
 
+/* Etiqueta de tipo de usuario */
 .user-type-label {
   font-size: 1rem;
   font-weight: 600;
@@ -205,6 +223,7 @@
   transition: all 0.3s ease;
 }
 
+/* Descripción de tipo de usuario */
 .user-type-description {
   font-size: 0.813rem;
   color: #64748b;
@@ -212,16 +231,19 @@
   transition: all 0.3s ease;
 }
 
+/* Etiqueta de tipo de usuario al pasar el ratón */
 .user-type-card:hover .user-type-label {
   color: #4f46e5;
 }
 
+/* Descripción de tipo de usuario al pasar el ratón */
 .user-type-card:hover .user-type-description {
   color: #4338ca;
 }
 
-/* Responsive adjustments */
+/* Ajustes responsivos */
 @media (max-width: 1024px) {
+  /* Cuadrícula de tipos de usuario en pantallas medianas */
   .user-type-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
@@ -230,10 +252,12 @@
 }
 
 @media (max-width: 768px) {
+  /* Contenedor principal en pantallas pequeñas */
   .user-type-container {
     padding: 1.5rem;
   }
 
+  /* Caja principal en pantallas pequeñas */
   .user-type-box {
     padding: 2rem;
     width: 90%;
@@ -244,62 +268,76 @@
     margin: 2rem auto;
   }
 
+  /* Título en pantallas pequeñas */
   .user-type-title {
     font-size: 1.5rem;
   }
 
+  /* Cuadrícula de tipos de usuario en pantallas pequeñas */
   .user-type-grid {
     grid-template-columns: 1fr;
     max-width: 400px;
     gap: 1.25rem;
   }
 
+  /* Tarjeta de tipo de usuario en pantallas pequeñas */
   .user-type-card {
     min-height: 160px;
   }
 }
 
 @media (max-width: 480px) {
+  /* Contenedor principal en pantallas muy pequeñas */
   .user-type-container {
     padding: 1rem;
   }
 
+  /* Título en pantallas muy pequeñas */
   .user-type-title {
     font-size: 1.25rem;
   }
 
+  /* Subtítulo en pantallas muy pequeñas */
   .user-type-subtitle {
     font-size: 0.875rem;
   }
 }
+
+/* Título del elemento */
 .itemTitle {
   margin: 0;
 }
 
-/* Responsive */
+/* Ajustes responsivos adicionales para pantallas muy pequeñas */
 @media (max-width: 480px) {
+  /* Caja de selección en pantallas muy pequeñas */
   .select-box {
     padding: 1.25rem;
   }
 
+  /* Cuadrícula de tipos en pantallas muy pequeñas */
   .type-grid {
     grid-template-columns: 1fr;
     gap: 0.625rem;
   }
 
+  /* Tarjeta de tipo en pantallas muy pequeñas */
   .type-card {
     padding: 0.875rem;
   }
 
+  /* Icono de tipo en pantallas muy pequeñas */
   .type-icon {
     width: 36px;
     height: 36px;
   }
 
+  /* Título de la tarjeta de tipo en pantallas muy pequeñas */
   .type-card h2 {
     font-size: 0.875rem;
   }
 
+  /* Párrafo de la tarjeta de tipo en pantallas muy pequeñas */
   .type-card p {
     font-size: 0.75rem;
   }

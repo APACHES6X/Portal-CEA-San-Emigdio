@@ -18,7 +18,7 @@ interface FormData {
   numeroDocumento: string;
   diaNacimiento: string;
   mesNacimiento: string;
-  anioNacimiento: string;
+  añoNacimiento: string;
   telefono: string;
   
   // Paso 3 - Ubicación y Salud
@@ -49,7 +49,7 @@ const RegisterVisitante = () => {
     numeroDocumento: '',
     diaNacimiento: '',
     mesNacimiento: '',
-    anioNacimiento: '',
+    añoNacimiento: '',
     telefono: '',
     pais: '',
     ciudad: '',
@@ -288,8 +288,8 @@ const RegisterVisitante = () => {
                   <div className="input-group date-input">
                     <input
                       type="text"
-                      name="anioNacimiento"
-                      value={formData.anioNacimiento}
+                      name="añoNacimiento"
+                      value={formData.añoNacimiento}
                       onChange={handleInputChange}
                       className="input-field"
                       placeholder=" "
@@ -319,7 +319,7 @@ const RegisterVisitante = () => {
       case 3:
         return (
           <div className={`form-step ${currentStep === 3 ? 'active' : ''} ${direction}`}>
-            <h2>Ubicación y Salud</h2>
+            <h2>Ubicación</h2>
             <div className="input-row name-row">
               <div className="input-group">
                 <input
